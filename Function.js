@@ -11,3 +11,16 @@ const number = 923.2238;
 
 console.log(Math.ceil(number));
 //924
+
+
+//Display the first and last letters of the sentence stored in the text constant:
+import length from './src/string.js';
+
+const text = 'Never forget what you are, for surely the world will not';
+const result1 = `First: ${text[0]}\nLast: ${text[length(text)-1]}`;
+
+console.log(result1);
+/*
+Fitrst: N
+Last: t
+*/
