@@ -24,3 +24,10 @@ console.log(result1);
 Fitrst: N
 Last: t
 */
+
+
+//Calculate programmatically (and not in your head) the minimum number among 3, 10, 22, -3, 0 - and display it on the screen.
+const minNum = Math.min(3,10,22,-3,0);
+
+console.log(minNum);
+//-3
