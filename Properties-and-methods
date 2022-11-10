@@ -6,3 +6,11 @@ firstName = firstName.trim();
 console.log(firstName);
 //Grigor
 
+
+//Using functions in parameters
+const name1 = 'Vito';
+const name2 = 'Tonny';
+
+console.log(Math.max(name1.length,name2.length);
+
+//5
