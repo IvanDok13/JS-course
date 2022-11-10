@@ -16,8 +16,10 @@ console.log(Math.max(name1.length,name2.length);
 //5
 
 
-//Get the part of the sentence written in the constant text, from 5 to 15 characters inclusive. Process the resulting substring
+/*Get the part of the sentence written in the constant text, from 5 to 15 characters inclusive. 
+Process the resulting substringand display the length of the final substring*/
+
 const text = 'When \t\n you play a \t\n game of thrones you win or you die.';
 
-console.log(text.slice(5, 15).trim());
-//you pla
+console.log(text.slice(5, 15).trim().length);
+//7
