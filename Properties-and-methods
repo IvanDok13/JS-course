@@ -14,3 +14,10 @@ const name2 = 'Tonny';
 console.log(Math.max(name1.length,name2.length);
 
 //5
+
+
+//Get the part of the sentence written in the constant text, from 5 to 15 characters inclusive. Process the resulting substring
+const text = 'When \t\n you play a \t\n game of thrones you win or you die.';
+
+console.log(text.slice(5, 15).trim());
+//you pla
