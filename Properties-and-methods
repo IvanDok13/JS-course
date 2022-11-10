@@ -1,0 +1,8 @@
+
+//Update the firstName variable with the same value, but without the extra whitespace characters at the end or beginning of the string.
+let firstName = '  Grigor   \n';
+firstName = firstName.trim();
+
+console.log(firstName);
+//Grigor
+
