@@ -14,3 +14,11 @@ const printMotto1 = () => {
 
 printMotto1();
 //Winter is coming
+
+
+//Implement a function that prints hurray! 3 times
+const sayHurrayThreeTimes = () => {
+    const word = 'hurray!';
+    return '${word} ${word} ${word}';
+};
+//retyrn 'hurray! hurray! hurray!'
