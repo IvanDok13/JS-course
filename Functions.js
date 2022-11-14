@@ -22,3 +22,25 @@ const sayHurrayThreeTimes = () => {
     return '${word} ${word} ${word}';
 };
 //retyrn 'hurray! hurray! hurray!'
+
+/*Implement a truncate() function that truncates the passed structure to a certain number of characters, 
+resulting in an ellipsis and returning the resulting structure*/
+
+const truncate = (text, length) => {
+   return(text.length > length) ?
+    text.slice(0, length) + '...' : text;
+};
+
+export default truncate;
+
+//OR 
+const truncate = (text, length) => {
+  const result = `${text.slice(0, length)}...`;
+  return result;
+};
+
+export default truncate;
+
+/*const text = 'Hello, world!';
+truncate(text, 5);*/
+//Hello
