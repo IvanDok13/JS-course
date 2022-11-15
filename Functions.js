@@ -44,3 +44,14 @@ export default truncate;
 /*const text = 'Hello, world!';
 truncate(text, 5);*/
 //Hello
+
+
+/*Implement the getHiddenCard() function, which takes a credit card number (consisting of 16 digits) 
+as a string as input and returns a hidden version of it that can be used on the site for display*/
+const getHiddenCard = (cardNumber, hiddenNumber = 4) => {
+  const hiddenCardNumber = `${'*'.repeat(hiddenNumber)}${cardNumber.slice(-4)}`;
+  return hiddenCardNumber;
+}
+
+export default getHiddenCard;
+//getHiddenCard(1234567892356789, 2) => **6789
