@@ -55,3 +55,13 @@ const getHiddenCard = (cardNumber, hiddenNumber = 4) => {
 
 export default getHiddenCard;
 //getHiddenCard(1234567892356789, 2) => **6789
+
+
+const sum = (a, b) => {
+  return a + b;
+}; //May be write as =>
+
+const sum = (a, b) => a + b;
+//Both code are equal
+
+
