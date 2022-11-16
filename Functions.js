@@ -65,3 +65,12 @@ const sum = (a, b) => a + b;
 //Both code are equal
 
 
+//Implement a capitalization() function that takes a non-empty entry and converts the first letter of the string to case-sensitive:
+const capitalize = (text) => `${text.slice(0, 1).toUpperCase()}${text.slice(1)}`;
+
+export default capitalize;
+//OR
+const capitalize = (text) => `${text[0].toUpperCase()}${text.slice(1)}`;
+
+export default capitalize;
+//const name = 'aleksandr'; console.log(capitalize(name)); => Aleksandr
