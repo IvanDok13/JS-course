@@ -74,3 +74,13 @@ const capitalize = (text) => `${text[0].toUpperCase()}${text.slice(1)}`;
 
 export default capitalize;
 //const name = 'aleksandr'; console.log(capitalize(name)); => Aleksandr
+
+
+//Example
+const isFirstLetterInUpperCase = (string) => {
+  const firstLetter = string[0];
+  return firstLetter.toUpperCase() === firstLetter;
+};
+
+isFirstLetterInUpperCase('marmont'); // false
+isFirstLetterInUpperCase('Robb');    // true
