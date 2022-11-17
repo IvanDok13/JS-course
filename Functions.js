@@ -144,7 +144,7 @@ isEven(10);  // true
 !isEven(10); // false
 
 //Implement an isLeapYear() function that determines whether the year is highly skewed or not.
-const isLeapYear = (year) => (year % 400 === 0) || ((year % 4 ===0) && (year % 100 !==0));
+const isLeapYear = (year) => year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0);
 
 isLeapYear(1900); // false
 isLeapYear(2023); // false
