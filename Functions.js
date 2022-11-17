@@ -95,3 +95,57 @@ export default isInternationalPhone;
 isInternationalPhone('89522682864'); // false
 isInternationalPhone('+79211287463'); // true
 
+
+//Here's a function that takes a password and says if it matches the conditions or doesn't:
+const isStrongPassword = (password) => {
+  const length = password.length;
+  return length > 8 && length < 20;
+};
+
+isStrongPassword('qwerty'); // false
+isStrongPassword('qwerty1234'); // true
+isStrongPassword('zxcvbnmasdfghjkqwertyui'); // false
+
+
+const hasSpecialChars = (str) => /* the content of the special offer in line*/;
+
+const hasCapitalChars = (str) => /* checks for capitalization of a string */;
+
+const isStrongPassword = (password) => {
+  const length = password.length;
+  return length > 8 && (hasSpecialChars(password) || hasCapitalChars(password));
+};
+
+/*another example. We want to find an apartment that meets the conditions: area from 100 sq. meters and more on any street 
+OR area from 80 sq. meters and more, but on the main street Main Street*/
+const isGoodApartment = (area, street) => {
+  const result = area >= 100 || (area >= 80 && street === 'Main Street');
+  return result;
+};
+
+isGoodApartment(91, 'Queens Street'); // false
+isGoodApartment(78, 'Queens Street'); // false
+isGoodApartment(70, 'Main Street');   // false
+
+isGoodApartment(120, 'Queens Street'); // true
+isGoodApartment(120, 'Main Street');   // true
+isGoodApartment(80, 'Main Street');    // true
+
+// false || true;
+3 < 2 || 'wow'.startsWith('w'); // true
+
+// false || false;
+'start' === 'Start' || 3 < 3; // false
+
+// ! - using negation you can check for oddness:
+const isEven = (number) => number % 2 === 0;
+
+isEven(10);  // true
+!isEven(10); // false
+
+//Implement an isLeapYear() function that determines whether the year is highly skewed or not.
+const isLeapYear = (year) => (year % 400 === 0) || ((year % 4 ===0) && (year % 100 !==0));
+
+isLeapYear(1900); // false
+isLeapYear(2023); // false
+isLeapYear(2000); // true
