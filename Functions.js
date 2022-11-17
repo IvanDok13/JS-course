@@ -84,3 +84,14 @@ const isFirstLetterInUpperCase = (string) => {
 
 isFirstLetterInUpperCase('marmont'); // false
 isFirstLetterInUpperCase('Robb');    // true
+
+
+/*Implement the isInternationalPhone() function, which checks the format of the specified phone. 
+If the phone starts with +, then it is an international format*/
+const isInternationalPhone = (phoneNumber) => phoneNumber[0] === '+';
+
+export default isInternationalPhone;
+
+isInternationalPhone('89522682864'); // false
+isInternationalPhone('+79211287463'); // true
+
