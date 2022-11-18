@@ -131,12 +131,6 @@ isGoodApartment(120, 'Queens Street'); // true
 isGoodApartment(120, 'Main Street');   // true
 isGoodApartment(80, 'Main Street');    // true
 
-// false || true;
-3 < 2 || 'wow'.startsWith('w'); // true
-
-// false || false;
-'start' === 'Start' || 3 < 3; // false
-
 // ! - using negation you can check for oddness:
 const isEven = (number) => number % 2 === 0;
 
