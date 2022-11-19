@@ -142,3 +142,11 @@ const isLeapYear = (year) => year % 400 === 0 || (year % 4 === 0 && year % 100 !
 isLeapYear(1900); // false
 isLeapYear(2023); // false
 isLeapYear(2000); // true
+
+
+/*Implement a getLetter() function that extracts the specified character from the given string 
+(by serial number, not index) and returns it to the outside. If there is no such character, then the function returns an empty string.*/
+const getLetter = (text, numberOfSymbol) => text[numberOfSymbol - 1] || '';
+
+const text = 'John Gold';
+console.log(getLetter(text[1])); //J
