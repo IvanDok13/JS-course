@@ -31,15 +31,14 @@ const truncate = (text, length) => {
     text.slice(0, length) + '...' : text;
 };
 
-export default truncate;
+
+const getLetter = (text, numberOfSymbol) => text[numberOfSymbol - 1] || '';
 
 //OR 
 const truncate = (text, length) => {
   const result = `${text.slice(0, length)}...`;
   return result;
 };
-
-export default truncate;
 
 /*const text = 'Hello, world!';
 truncate(text, 5);*/
