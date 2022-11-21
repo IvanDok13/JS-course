@@ -164,3 +164,40 @@ const getTypeOfSentence = (sentence) => {
 console.log(getTypeOfSentence('Hodor'));  // general
 console.log(getTypeOfSentence('Hodor?')); // question
 
+
+const getTypeOfSentence = (sentence) => {
+  const lastChar = sentence[sentence.length - 1];
+  let sentenceType;
+
+  if (lastChar === '?') {
+    sentenceType = 'question';
+  } else if (lastChar === '!') {
+    sentenceType = 'exclamation';
+  } else {
+    sentenceType = 'normal';
+  }
+
+  return `Sentence is ${sentenceType}`;
+};
+
+getTypeOfSentence('Who?'); // Sentence is question
+getTypeOfSentence('No');   // Sentence is normal
+getTypeOfSentence('No!');  // Sentence is exclamation
+
+
+/*Implement a normalizeUrl() function that performs what is known as data normalization. 
+It takes a website address and returns it with https:// at the beginning*/
+const normalizeUrl = (adress) => {
+  const writtenAdress = adress.startsWith('https://');
+
+  if (writtenAdress === true) {
+    return adress;
+    
+  } else {
+    return `https://${adress}`;
+  };
+
+};
+
+console.log(normalizeUrl('Hodor')); //https://Hodor
+console.log(normalizeUrl('https://Hodor')); //https://Hodor
