@@ -199,5 +199,19 @@ const normalizeUrl = (adress) => {
 
 };
 
-console.log(normalizeUrl('Hodor')); //https://Hodor
-console.log(normalizeUrl('https://Hodor')); //https://Hodor
+
+//The same
+const normalizeUrl = (site) => {
+  let normalizedUrl;
+
+  if (site.startsWith('https://')) {
+    normalizedUrl = site;
+  } else {
+    normalizedUrl = `https://${site}`;
+  }
+
+  return normalizedUrl;
+};
+
+console.log(normalizeUrl('Hodor')); //  https://Hodor
+console.log(normalizeUrl('https://Hodor')); //  https://Hodor
