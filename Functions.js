@@ -222,3 +222,21 @@ const normalizeUrl = (site) => {
 
 console.log(normalizeUrl('Hodor')); //  https://Hodor
 console.log(normalizeUrl('https://Hodor')); //  https://Hodor
+
+
+/*Implement a convertText() function that takes a string as input and, if the first letter is not capitalized, 
+returns a reversed version of the original string*/
+const reverse = (s) => s.split('').reverse().join('');
+const convertText = (text) => {
+  
+  if (text === '') {
+    return text;
+  } else if (text[0] === text[0].toUpperCase()) {
+    return text;
+  } else {
+    return reverse(text);
+  };
+};
+console.log(convertText('Hodor')); // Hodor
+console.log(convertText('https://Hodor')); // rodoH//:sptth
+console.log(convertText('')); // ''
