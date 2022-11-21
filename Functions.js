@@ -158,10 +158,17 @@ const getTypeOfSentence = (sentence) => {
   if (lastChar === '?') {
     return 'question';
   }
-  return 'general';
+  return 'normal';
+};
+                       
+// OR
+const getTypeOfSentence = (sentence) => {
+  const lastChar = sentence.slice(-1);
+
+  return (lastChar === '?') ? 'question' : 'normal';
 };
 
-console.log(getTypeOfSentence('Hodor'));  // general
+console.log(getTypeOfSentence('Hodor'));  // normal
 console.log(getTypeOfSentence('Hodor?')); // question
 
 
