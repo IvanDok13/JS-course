@@ -155,9 +155,9 @@ console.log(getLetter(text[1])); //J
 //the function determines the type of the passed sentence. To begin with, it will distinguish ordinary sentences from interrogative ones.
 const getTypeOfSentence = (sentence) => {
   const lastChar = sentence[sentence.length - 1];
-  if (lastChar === '?')
+  if (lastChar === '?') {
     return 'question';
-
+  }
   return 'general';
 };
 
