@@ -245,6 +245,13 @@ const convertText = (text) => {
        : reverse(text);
   };
 
+//OR
+const reverse = (s) => s.split('').reverse().join('');
+
+const convertText = (text) => {
+  return (text === '' || text[0] === text[0].toUpperCase()) ? text : reverse(text);
+};
+
 console.log(convertText('Hodor')); // Hodor
 console.log(convertText('https://Hodor')); // rodoH//:sptth
 console.log(convertText('')); // ''
