@@ -220,6 +220,7 @@ const normalizeUrl = (site) => {
 console.log(normalizeUrl('Hodor')); //  https://Hodor
 console.log(normalizeUrl('https://Hodor')); //  https://Hodor
 
+                                                                //Conditional (ternary) operator / reverse Function
 
 /*Implement a convertText() function that takes a string as input and, if the first letter is not capitalized, 
 returns a reversed version of the original string*/
@@ -234,6 +235,16 @@ const convertText = (text) => {
     return reverse(text);
   };
 };
+
+//OR
+const reverse = (s) => s.split('').reverse().join('');
+
+const convertText = (text) => {
+  return text === '' ? text
+       : text[0] === text[0].toUpperCase() ? text
+       : reverse(text);
+  };
+
 console.log(convertText('Hodor')); // Hodor
 console.log(convertText('https://Hodor')); // rodoH//:sptth
 console.log(convertText('')); // ''
