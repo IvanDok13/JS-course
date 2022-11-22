@@ -1,3 +1,5 @@
+                                                              //Basic Function
+
 //Implement a function called printMotto() that will print the phrase Winter is coming to the screen.
 const printMotto = () => {
   const motto = 'Winter is coming';
@@ -15,35 +17,36 @@ const printMotto1 = () => {
 printMotto1();
 //Winter is coming
 
+                                                     //Сoncatenation `$ $`  inside the Function
 
 //Implement a function that prints hurray! 3 times
 const sayHurrayThreeTimes = () => {
     const word = 'hurray!';
-    return '${word} ${word} ${word}';
+    return `${word} ${word} ${word}`;
 };
 //retyrn 'hurray! hurray! hurray!'
+                                                      //Truncate(text, length) Function
 
 /*Implement a truncate() function that truncates the passed structure to a certain number of characters, 
 resulting in an ellipsis and returning the resulting structure*/
+
 
 const truncate = (text, length) => {
    return(text.length > length) ?
     text.slice(0, length) + '...' : text;
 };
-
-
-const getLetter = (text, numberOfSymbol) => text[numberOfSymbol - 1] || '';
-
+                                                       
 //OR 
 const truncate = (text, length) => {
   const result = `${text.slice(0, length)}...`;
   return result;
 };
 
-/*const text = 'Hello, world!';
-truncate(text, 5);*/
-//Hello
+const text = 'Hello, world!';
+truncate(text, 5); //Hello
 
+
+                                                         //.Repeat(), .slice() Function
 
 /*Implement the getHiddenCard() function, which takes a credit card number (consisting of 16 digits) 
 as a string as input and returns a hidden version of it that can be used on the site for display*/
@@ -55,24 +58,22 @@ const getHiddenCard = (cardNumber, hiddenNumber = 4) => {
 export default getHiddenCard;
 //getHiddenCard(1234567892356789, 2) => **6789
 
+                                                           //Short form of Functions with RETURN
+const getLetter = (text, length) => text[length - 1] || '';
 
 const sum = (a, b) => {
   return a + b;
 }; //May be write as =>
-
 const sum = (a, b) => a + b;
 //Both code are equal
 
 
 //Implement a capitalization() function that takes a non-empty entry and converts the first letter of the string to case-sensitive:
 const capitalize = (text) => `${text.slice(0, 1).toUpperCase()}${text.slice(1)}`;
-
-export default capitalize;
 //OR
 const capitalize = (text) => `${text[0].toUpperCase()}${text.slice(1)}`;
-
-export default capitalize;
-//const name = 'aleksandr'; console.log(capitalize(name)); => Aleksandr
+const name = 'aleksandr'; 
+console.log(capitalize(name)); //Aleksandr
 
 
 //Example
@@ -84,7 +85,7 @@ const isFirstLetterInUpperCase = (string) => {
 isFirstLetterInUpperCase('marmont'); // false
 isFirstLetterInUpperCase('Robb');    // true
 
-
+/////////////////////////////////////////////////
 /*Implement the isInternationalPhone() function, which checks the format of the specified phone. 
 If the phone starts with +, then it is an international format*/
 const isInternationalPhone = (phoneNumber) => phoneNumber[0] === '+';
@@ -183,7 +184,6 @@ const getTypeOfSentence = (sentence) => {
   } else {
     sentenceType = 'normal';
   }
-
   return `Sentence is ${sentenceType}`;
 };
 
@@ -199,11 +199,9 @@ const normalizeUrl = (adress) => {
 
   if (writtenAdress === true) {
     return adress;
-    
   } else {
     return `https://${adress}`;
   };
-
 };
 
 
@@ -216,13 +214,13 @@ const normalizeUrl = (site) => {
   } else {
     normalizedUrl = `https://${site}`;
   }
-
   return normalizedUrl;
 };
 
 console.log(normalizeUrl('Hodor')); //  https://Hodor
 console.log(normalizeUrl('https://Hodor')); //  https://Hodor
 
+                                                                //Conditional (ternary) operator / reverse Function
 
 /*Implement a convertText() function that takes a string as input and, if the first letter is not capitalized, 
 returns a reversed version of the original string*/
@@ -237,6 +235,23 @@ const convertText = (text) => {
     return reverse(text);
   };
 };
+
+//OR
+const reverse = (s) => s.split('').reverse().join('');
+
+const convertText = (text) => {
+  return text === '' ? text
+       : text[0] === text[0].toUpperCase() ? text
+       : reverse(text);
+  };
+
+//OR
+const reverse = (s) => s.split('').reverse().join('');
+
+const convertText = (text) => {
+  return (text === '' || text[0] === text[0].toUpperCase()) ? text : reverse(text);
+};
+
 console.log(convertText('Hodor')); // Hodor
 console.log(convertText('https://Hodor')); // rodoH//:sptth
 console.log(convertText('')); // ''
