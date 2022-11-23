@@ -255,3 +255,25 @@ const convertText = (text) => {
 console.log(convertText('Hodor')); // Hodor
 console.log(convertText('https://Hodor')); // rodoH//:sptth
 console.log(convertText('')); // ''
+
+                                                                //Switch construction
+
+/*Implement a getNumberExplanation() function that takes a number as input and returns an explanation of that number. 
+If there is no explanation for the number, then null is returned:*/
+const getNumberExplanation = (number) => {
+    switch (number) {
+    case 666:
+      return 'devil number';
+    case 42: 
+      return 'answer for everything';
+    case 7:
+      return 'prime number';
+    default:
+      return null;
+  };
+};
+
+console.log(getNumberExplanation(666)); //'devil number'
+console.log(getNumberExplanation(42)); //'answer for everything'
+console.log(getNumberExplanation(7)); //'prime number'
+console.log(getNumberExplanation(5)); //null
