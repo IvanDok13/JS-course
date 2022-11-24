@@ -20,7 +20,7 @@ printNumbers(3);
 //Modify the printNumbers() function to print numbers in reverse order
 const printNumbers = (initialNumber) => {
   var i = initialNumber;
-  while ((i >= 1) && (i <= initialNumber)) {
+  while (i >= 1) {
     console.log(i);
     i --;
   }
