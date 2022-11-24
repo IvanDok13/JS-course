@@ -1,3 +1,4 @@
+                                                                            //While                                                
 const printNumbers = (lastNumber) => {
   // i – index 
   let i = 1;
@@ -14,3 +15,20 @@ printNumbers(3);
 // => 2
 // => 3
 // => finished!
+
+
+//Modify the printNumbers() function to print numbers in reverse order
+const printNumbers = (initialNumber) => {
+  var i = initialNumber;
+  while ((i >= 1) && (i <= initialNumber)) {
+    console.log(i);
+    i --;
+  }
+  console.log('finished!');
+};
+
+printNumbers(0); //'finished!'
+printNumbers(2); //'2,1, finished!'
+printNumbers(7); // '7, 6, 5, 4, 3, 2, 1, finished!'
+printNumbers(-5); //'finished!'
+
