@@ -59,3 +59,20 @@ const joinNumbersFromRange = (start, finish) => {
 }
 
 console.log(joinNumbersFromRange(-3, 5)) //-3-2-1012345
+
+
+                                                                //Reverse cycle
+const reverseNameBySymbol = (name) => {
+  let i = 0;
+  let result = '';
+  
+  while (i < name.length) {
+    result = `${name[i]}${result}`;
+    i += 1;
+  }
+  
+  return result;
+};
+
+
+console.log(reverseNameBySymbol('Arua')); //'aurA'
