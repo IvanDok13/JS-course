@@ -32,3 +32,15 @@ printNumbers(2); //'2,1, finished!'
 printNumbers(7); // '7, 6, 5, 4, 3, 2, 1, finished!'
 printNumbers(-5); //'finished!'
 
+
+                                                             // Multiply cycle for range
+const multiplyNumbersFromRange = (start, finish) => {
+  let i = start;
+  let multiply = 1;
+  while (i <= finish) {
+    multiply *= i;
+    i += 1;
+  }
+  return multiply;
+}
+console.log(multiplyNumbersFromRange(3, 5)); // 60
