@@ -122,5 +122,4 @@ const countChars = (text, letter) => {
   return count;
 };
 
-
-console.log(countChars('Hello World!', 'L'))
+console.log(countChars('HeLLo World!', 'L')) //3
