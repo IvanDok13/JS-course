@@ -105,3 +105,21 @@ const mySubstr = (text, textBefore) => {
 
   return result;
 };
+
+                                                                           //While +if
+                                                                           
+//The countChars() function from theory counts how many times a letter appears in a sentence, case is not important:
+const countChars = (text, letter) => {
+  let i = 0;
+  let count = 0;
+  while (i < text.length) {
+    if (text[i].toLowerCase() === letter.toLowerCase()) {
+      count += 1;
+    }
+    i += 1;
+  }
+
+  return count;
+};
+
+console.log(countChars('HeLLo World!', 'L')) //3
