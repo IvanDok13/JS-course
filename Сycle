@@ -123,3 +123,26 @@ const countChars = (text, letter) => {
 };
 
 console.log(countChars('HeLLo World!', 'L')) //3
+
+
+//Write a makeItFunny() function that takes a string as input and returns a copy of it with every nth element converted to uppercase
+const makeItFunny = (text, numberOfElement) => {
+  let i = 0;
+  let result = '';
+
+  while (i < text.length) {
+
+    if ((i + 1) % numberOfElement === 0) {
+      result += text[i].toUpperCase();
+      i++;
+    } else {
+      result += text[i];
+      i++;
+    }
+  }
+
+  return result;
+};
+
+console.log(makeItFunny('i never look back', 7)); //"i neveR look Back"
+console.log(makeItFunny('i never look back', 3)); //"i NevEr LooK bAck"
