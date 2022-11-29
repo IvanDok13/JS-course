@@ -17,7 +17,7 @@ const printMotto1 = () => {
 printMotto1();
 //Winter is coming
 
-                                                     //Сoncatenation `$ $`  inside the Function
+                                                     //Сoncatenation `${...}${...}, end of the text.`  inside the Function
 
 //Implement a function that prints hurray! 3 times
 const sayHurrayThreeTimes = () => {
