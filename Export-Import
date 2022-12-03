@@ -38,3 +38,5 @@ import square from './square.js';
 import { getTriangleArea } from './myMathModule.js';
 
 export default (n) => getTriangleArea(n, square(n) / 2);
+
+// solution (3) === 6.75
