@@ -1,3 +1,10 @@
+//1.Create a getTriangleArea() function that takes two arguments 'h' and 'b' and calculates the area of a triangle
+//2.Export the function.
+//3.Import the getTriangleArea() function from myMathModule.
+/*4.Create a function that takes an argument n and returns the area of a triangle with height n and base n2/2. 
+Use the square() function (takes a number and returns its square).*/
+//5.Export the default function you created.
+
 //square.js
 export default (num) => num * num;
 
