@@ -16,3 +16,18 @@ import { getTriangleArea } from './myMathModule.js';
 const solution = (n) => getTriangleArea(n, square(n) / 2);
 
 export default solution;
+
+//OR
+//square.js
+export default (num) => num * num;
+
+//muMathModule.js
+export const getTrianglePerimeter = (a, b, c) => a + b + c;
+
+export const getTriangleArea = (h, b) => (h * b) / 2;
+
+//solution.js
+import square from './square.js';
+import { getTriangleArea } from './myMathModule.js';
+
+export default (n) => getTriangleArea(n, square(n) / 2);
