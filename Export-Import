@@ -1,3 +1,10 @@
+//1.Create a getTriangleArea() function that takes two arguments 'h' and 'b' and calculates the area of a triangle
+//2.Export the function.
+//3.Import the getTriangleArea() function from myMathModule.
+/*4.Create a function that takes an argument n and returns the area of a triangle with height n and base n2/2. 
+Use the square() function (takes a number and returns its square).*/
+//5.Export the default function you created.
+
 //square.js
 export default (num) => num * num;
 
@@ -16,3 +23,20 @@ import { getTriangleArea } from './myMathModule.js';
 const solution = (n) => getTriangleArea(n, square(n) / 2);
 
 export default solution;
+
+//OR
+//square.js
+export default (num) => num * num;
+
+//muMathModule.js
+export const getTrianglePerimeter = (a, b, c) => a + b + c;
+
+export const getTriangleArea = (h, b) => (h * b) / 2;
+
+//solution.js
+import square from './square.js';
+import { getTriangleArea } from './myMathModule.js';
+
+export default (n) => getTriangleArea(n, square(n) / 2);
+
+// solution (3) === 6.75
