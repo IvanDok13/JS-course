@@ -24,5 +24,30 @@ console.log(book.hasOwnProperty(a)); //true
 console.log('numberOfPages' in book); //true
 
 //3. Проверьте существование у объекта свойства hardcover
-
 console.log('hardcover' in book); //false
+
+//4. Create an object describing you as a QA5 student.
+const studentQA5 = {
+  name: 'Ivan',
+  lastName: 'Klochkov',
+  age: 27,
+  sex: 'man',
+  position: 'Java Script Developer'
+}
+
+//5. Add any property
+studentQA5.experience = '3 month';
+console.log(studentQA5); //Now studentQA5 has property (expirience: '3 month').
+
+//6. Change the value of some property
+studentQA5.name = 'Sergey';
+console.log(studentQA5); // now (name: 'Sergey');
+
+//7. Delete any property
+delete studentQA5.sex;
+console.log(studentQA5); //studentQA5 has no property (sex: 27);
+
+//8. Determine if an object has a Background property
+const hasBackgroundAsProgrammer = 'Background' in studentQA5;
+console.log(hasBackgroundAsProgrammer);
+console.log(studentQA5.hasOwnProperty('name'));
