@@ -1,0 +1,28 @@
+//Does the object have THIS property?
+//1. Create an object describing the book with the following properties: authorFirstName, authorLastName, title, style, year,  numberOfPages
+//set object property values.
+const book = {
+  authorFirstName: 'Alexandr',
+  authorLastName: 'Pushkin',
+  title: 'Captain\'s daughter',
+  style: 'Novell',
+  year: '1983',
+  numberOfPages: 23134,
+}
+//2. Check the existence of these six properties on an object in different ways.
+console.log(!!(book.authorFirstName)); //true
+
+console.log(Boolean(book.title)); //true
+
+console.log(book.style === undefined); //false
+
+console.log(book.hasOwnProperty('year')); //true
+
+const a = 'authorLastName';
+console.log(book.hasOwnProperty(a)); //true
+
+console.log('numberOfPages' in book); //true
+
+//3. Проверьте существование у объекта свойства hardcover
+
+console.log('hardcover' in book); //false
