@@ -185,4 +185,5 @@ const encrypt = (str) => {
   }
 
   return result;
-};
+};   
+console.log(encrypt(Hello World!)) //"eHll ooWlr!d"
