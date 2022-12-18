@@ -162,7 +162,7 @@ const makeItFunny = (str, n) => {
 };
 
 
-//
+                                                                   //FOR
 const encrypt = (message) => {
   let result = '';
   for (let i = 0; i < message.length; i += 2) {
