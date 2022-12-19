@@ -85,7 +85,7 @@ const isFirstLetterInUpperCase = (string) => {
 isFirstLetterInUpperCase('marmont'); // false
 isFirstLetterInUpperCase('Robb');    // true
 
-/////////////////////////////////////////////////
+//
 /*Implement the isInternationalPhone() function, which checks the format of the specified phone. 
 If the phone starts with +, then it is an international format*/
 const isInternationalPhone = (phoneNumber) => phoneNumber[0] === '+';
@@ -191,6 +191,7 @@ getTypeOfSentence('Who?'); // Sentence is question
 getTypeOfSentence('No');   // Sentence is normal
 getTypeOfSentence('No!');  // Sentence is exclamation
 
+                                                                   //Normalize URL
 
 /*Implement a normalizeUrl() function that performs what is known as data normalization. 
 It takes a website address and returns it with https:// at the beginning*/
