@@ -206,7 +206,7 @@ const normalizeUrl = (adress) => {
 };
 
 
-//The same
+//Or
 const normalizeUrl = (site) => {
   let normalizedUrl;
 
