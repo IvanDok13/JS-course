@@ -1,0 +1,90 @@
+//1. Создайте пустой массив. Выведите в консоль массив и его длину.
+let arr = [];
+let arr2 = Array(1, 2, 3);
+let arr3 = Array.of(3, 4, 5);
+let arr4 = Array(3);
+let arr5 = Array();
+let arr6 = new Array(6, 7, 8)
+
+console.log(arr);
+console.log(arr2);
+console.log(arr3);
+console.log(arr4);
+console.log(arr5);
+console.log(arr6);
+//2. С помощью цикла создайте массив, заполненный десятью нулями.
+//   Выведите в консоль массив и его длину.
+for(let i = 0; i < 10; i++) {
+    arr.unshift(0);
+}
+console.log(arr);
+console.log(arr.length);
+//3. С помощью цикла создайте массив, заполненный 
+//   числами: 1,2,3,4,5,6,7,8,9,10. Выведите полученный массив в консоль.
+for(let j = 0; j < 10; j++) {
+    arr5.push(j + 1);
+}
+console.log(arr5);
+console.log(arr5.length);
+//4. С помощью цикла создайте массив, заполненный числами: 
+//   2,4,6,8,10,12,14,16,18,20. Выведите полученный массив в консоль.
+let arr8 = [];
+for(let j = 0; j < 10; j++) {
+    arr8.push((j + 1) * 2);
+}
+console.log(arr8);
+console.log(arr8.length);
+//5. С помощью цикла создайте массив, заполненный числами: 
+//   1,3,5,7,9,11,13,15,17,19. Выведите полученный массив в консоль.
+ let arr9 = [];
+for(let j = 1; j <= 19; j += 2) {
+    arr9.push(j);
+}
+console.log(arr9);
+console.log(arr9.length);
+//6. С помощью цикла создайте массив, заполненный числами: 
+//   1,-2,3,-4,5,-6,7,-8,9,-10. Выведите полученный массив в консоль.
+ let arr10 = [];
+for(let j = 1; j <= 10; j++) {
+    if (j % 2 === 0) {
+      arr10.push(-j);
+    } else {
+      arr10.push(j);
+    }
+}
+console.log(arr10);
+console.log(arr10.length);
+//7*. С помощью цикла создайте массив, заполненный случайными
+//    целыми числами. Выведите полученный массив в консоль.
+//   (Используйте метод Math.random(), умножение и округление)
+let arr11 = [];
+let res;
+let roundUnit;
+for (let i = 0; i < 10; i++) {
+    function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+    }
+      res = getRandomArbitrary(0, 10);
+      roundUnit = Math.round(res);
+      arr11.push(roundUnit);
+}
+console.log(arr11);
+console.log(arr11.length);
+
+//8. Создайте массив, заполненный десятью числами Фибоначчи. 
+//   В последовательности Фибоначчи первые два числа равны 1, 
+//   а начиная с третьего, каждый элемент равен сумме двух предыдущих.  
+let arr12 = [];
+let result;
+for(let j = 0; j < 10; j++) {
+   if (j === 1 || j === 0) {
+    result = 1;
+    arr12.push(result);
+  } else {
+    result =  arr12[j - 1] + arr12[j - 2];
+    arr12.push(result);
+  }
+   
+}
+console.log(arr12);
+console.log(arr12.length);
