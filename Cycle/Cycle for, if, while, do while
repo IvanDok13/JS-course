@@ -193,3 +193,45 @@ const encrypt = (str) => {
   return result;
 };   
 console.log(encrypt(Hello World!)) //"eHll ooWlr!d"
+
+//1. Выведите в консоль числа, кратные 3, в диапазоне от 1 до 40.
+for (let i = 1; i < 41; i++) {
+  if (i % 3 === 0) console.log(i);
+}
+//2. Задайте пустой массив arr. Используя метод push, заполните 
+//   в цикле массив четными числами от 30 до 10 с порядке убывания.
+let arr = [];
+for (let i = 30; i >= 10; i--) {
+  if (i % 2 === 0) {
+    arr.push(i);
+  }
+}
+console.log(arr);
+//3. Задана строка str = 'Now I am studying programming on JS'.
+// Найти количество пробелов в строке.
+let str = 'Now I am studying programming on JS';
+let counter = 0;
+for (let i = 0; i < str.length; i++) {
+  if (str[i] === ' ') counter++;
+}
+console.log(counter);
+//4. Найти общее количество гласных букв (a,o,e,u,i) в строке str.
+let vowel = 0;
+for (let i = 0; i < str.length; i++) {
+  if (str[i] === 'a'|| str[i] === 'o' || str[i] === 'e' || str[i] === 'u' || str[i] === 'i') vowel++;
+}
+console.log(vowel);
+//5. Дан массив arr = [3, 7, 4, 9, 2, 10, 1, 17, 6, 23, 5, 13];
+// Найти разность между максимальным и минимальным элементом массива.
+let arr1 = [3, 7, 4, 9, 2, 10, 1, 17, 6, 23, 5, 13];
+let min = arr1[1];
+let max = arr1[2];
+let difference = 0;
+for (let i = 0; i < arr1.length; i++) {
+  if (arr1[i] < min) min = arr1[i];
+  if (arr1[i] > max) max = arr1[i];
+}
+difference = max - min;
+console.log(min);
+console.log(max);
+console.log(difference);
