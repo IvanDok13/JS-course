@@ -1,0 +1,100 @@
+//1. Дан массив arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//   Напишите функцию sum, которая принимает массив как аргумент и возвращает
+//   сумму элементов массива.
+// Function Declaration 
+let sum = 0;
+function getSum(arr1) {
+  for (let i = 0; i < arr1.length; i++) {
+    sum += arr1[i];
+  }
+  return sum;
+}
+console.log(getSum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 9])); 
+
+
+//Arrow function
+sum = 0;
+let getSum1 = (arr1) => {
+  for (let i = 0; i < arr1.length; i++) {
+    sum += arr1[i];
+  }
+  return sum;
+}
+console.log(getSum1([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 9])); 
+
+
+//Function Expression
+sum = 0;
+let getSum2 = function(arr1) {
+  for (let i = 0; i < arr1.length; i++) {
+    sum += arr1[i];
+  }
+  return sum;
+}
+console.log(getSum2([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 9]));
+
+
+//2. Дан массив arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//   Напишите функцию reverse, которая принимает массив как аргумент и возвращает
+//   массив, в котором элементы расположены в обратном порядке.
+let arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function reverce(arr2) {
+  let newArr = [];
+  for (let i = 0; i < arr2.length; i++) {
+    newArr.unshift(arr2[i]);
+  }
+  return newArr;
+} 
+
+let reverce1 = (arr2) => {
+  let newArr = [];
+  for (let i = 0; i < arr2.length; i++) {
+    newArr.unshift(arr2[i]);
+  }
+  return newArr;
+}
+console.log(reverce1(arr2));
+
+let reverce2 = function(arr2) {
+  let newArr = [];
+  for (let i = 0; i < arr2.length; i++) {
+    newArr.unshift(arr2[i]);
+  }
+  return newArr;
+} 
+console.log(reverce2(arr2));
+//3. Дан массив arr3 = [1, 2, -3, 4, -5, 6, 7, -8, 9, 10];
+//   Напишите функцию indexOfFirstNegative, которая принимает массив и возвращает
+//   индекс первого отрицательного элемента массива (в данном массиве это 2).
+let arr3 = [-1, 2, 3, 4, -5, 6, 7, -8, 9, 10];
+function indexOfFirstNegative(arr3) {
+  for (let i = 0; i < arr3.length; i++) {
+    if (arr3[i] < 0) return i;
+  }
+}
+console.log(indexOfFirstNegative(arr3));
+//4. Напишите функцию с именем newArray, которая принимает два числа x, y (x<y)
+//   и возвращает массив, в котором записаны целые числа от x до y.
+//   Например, если x = 5, y = 10, вернуть массив [5,6,7,8,9,10];
+function newArray(x, y) {
+  let arr4 = [];
+  for (let i = x; i <= y; i++) {
+    arr4.push(i);
+  }
+  return arr4;
+}
+console.log(newArray(0, 10));
+//5. Дан массив строк: 
+//   arr4 = ['apple', 'orange', 'grape', 'banana', 'mango', 'peach'];
+//   Напишите функцию countWords, которая принимает массив как аргумент 
+//   и возвращает количество слов, длина которых равна 5.
+let arr5 = ['apple', 'orange', 'grape', 'bananа', 'mango', 'peach'];
+let countWords = (arr5) => {
+  let count = 0;
+  for (let i = 0; i < arr5.length; i++) {
+    if (arr5[i].length === 5) count++;
+  }
+  return count;
+}
+
+console.log(countWords(arr5));
