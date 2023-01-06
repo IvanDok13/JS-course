@@ -113,3 +113,13 @@ function indexOfFirstNegative(arr){
     }
     return 'no negative elements';
 }
+
+// Get couunt numbers from arr
+function countOfNumbers(arr){
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+  if (typeof arr[i] === 'number') sum++;
+    }
+    return sum;
+}
+console.log(countOfNumbers([1, 2, 'sef']));
