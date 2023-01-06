@@ -70,3 +70,16 @@ function getString(num3) {
   return `${num3}`;
 }
 console.log(getString(2));
+
+
+function productOfArray(arr){
+  if (arr[0] === undefined) return 0;
+  let mult = 1;
+  for (let i = 0; i < arr.length; i++) {
+    mult *= arr[i];
+  }
+  return mult;
+}
+console.log(productOfArray([])); //0
+console.log(productOfArray([0])); //0
+console.log(productOfArray([1, 2])); //2
