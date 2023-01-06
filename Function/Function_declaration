@@ -105,3 +105,11 @@ function sumOfPositive(arr){
   return sum;
 }
 console.log(sumOfPositive([-1, -2, -3])); //0
+
+//Get index of first negative element of arr
+function indexOfFirstNegative(arr){
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < 0) return i;
+    }
+    return 'no negative elements';
+}
