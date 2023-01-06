@@ -71,7 +71,7 @@ function getString(num3) {
 }
 console.log(getString(2));
 
-
+// Get mult of arr
 function productOfArray(arr){
   if (arr[0] === undefined) return 0;
   let mult = 1;
@@ -84,7 +84,7 @@ console.log(productOfArray([])); //0
 console.log(productOfArray([0])); //0
 console.log(productOfArray([1, 2])); //2
 
-
+// Get average val
 function average(arr){
   if (arr[0] === undefined) return 0;
   let sum = 0;
@@ -94,3 +94,14 @@ function average(arr){
   return sum / arr.length;;  
 }
 console.log(average([])); //0
+
+//Sum positive numbers of array
+function sumOfPositive(arr){
+  if (arr[0] === undefined) return 0;
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) sum += arr[i];
+  }
+  return sum;
+}
+console.log(sumOfPositive([-1, -2, -3])); //0
