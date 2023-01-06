@@ -36,3 +36,50 @@ function distance(x, y) {
   return dis;
 }
 console.log(distance(3, 4));
+
+//1. Напишите функцию, которая принимает число как аргумент и возвращает 
+//  противоположное по значению число. (1  => -1; -5 => 5; 0 => 0).
+function getOppVal(num) {
+  return -num;
+}
+console.log(getOppVal(-2));
+console.log(getOppVal(2));
+//2. Напишите функцию, которая принимает целое число как аргумент и возвращает 
+//  "Even" для четных чисел  или  "Odd" для нечетных чисел.
+function cheсkParity(num1) {
+  if (num1 % 2) return 'Odd';
+  return 'Even';
+}
+console.log(cheсkParity(-2));
+//3. Напишите функцию, которая принимает строку и возвращает первый символ строки. 
+function getFirstLetter(str) {
+  return str[0];
+}
+console.log(getFirstLetter('Rhfsjhfk'));
+//4. Напишите функцию, которая принимает число и возвращает 
+//  его отрицательным. Если число уже отрицательное, то возвращается само число. 
+//  Если число равно 0, возвращается 0.
+function getNegative(num2) {
+  if (num2 < 0) return num2;
+  return -num2;
+}
+console.log(getNegative(-2));
+//5. Напишите функцию, которая принимает число, трансформирует это число  
+//   в строку и возвращает эту строку.
+function getString(num3) {
+  return `${num3}`;
+}
+console.log(getString(2));
+
+
+function productOfArray(arr){
+  if (arr[0] === undefined) return 0;
+  let mult = 1;
+  for (let i = 0; i < arr.length; i++) {
+    mult *= arr[i];
+  }
+  return mult;
+}
+console.log(productOfArray([])); //0
+console.log(productOfArray([0])); //0
+console.log(productOfArray([1, 2])); //2
