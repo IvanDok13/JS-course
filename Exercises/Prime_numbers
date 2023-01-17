@@ -16,4 +16,24 @@ function numbPrime(n) {
   return arr;
 }
   
-console.log(numbPrime(6));
+console.log(numbPrime(6)); //[2, 3, 5]
+
+//OR
+
+function isPrime(n){
+  let notPrime = [];
+  let primes = [];
+  
+  for (let i = 2; i <= n; i++) {
+    
+    if (!notPrime[i]) {
+      primes.push(i); 
+         for (let j = i * 2; j <= n; j++) {
+            notPrime[j] = true;
+         }
+    }
+   }
+  
+  return primes;
+}
+console.log(isPrime(7)); //[2, 3, 5, 7]
