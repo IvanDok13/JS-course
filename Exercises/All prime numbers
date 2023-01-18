@@ -1,0 +1,33 @@
+function prodIntPart(n){
+    let arr = []; 
+    let count = 0;
+    let res = n;
+    let newArr = []
+    
+   
+     for (let i = 0; i < n; i++) {
+       if (res % 2 === 0) {
+         count++;
+         arr.push(2);
+         res /= 2;
+       }
+       if (res % 3 === 0) {
+         count++;
+         arr.push(3);
+         res /= 3;
+       }
+       if (res % 5 === 0) {
+         count++;
+         arr.push(5);
+         res /= 5;
+       }
+       if (res % 7 === 0) {
+         count++;
+         arr.push(7);
+         res /= 7;
+       }   
+    }  
+    newArr.push(count, arr.sort());
+    return newArr;
+}
+console.log(prodIntPart(60));
